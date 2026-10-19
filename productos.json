@@ -1,0 +1,74 @@
+[
+  {
+    "id": "goku-figura",
+    "nombre": "Figura conceptual de Goku",
+    "categoria": "Figuras",
+    "descripcion": "Mockup de figura de Dragon Ball en gi naranja, con base dinámica de colección.",
+    "precio": 28900,
+    "imagen": "assets/anime/goku-figure.webp",
+    "etiqueta": "CONCEPTO 01"
+  },
+  {
+    "id": "tanjiro-figura",
+    "nombre": "Figura conceptual de Tanjiro",
+    "categoria": "Figuras",
+    "descripcion": "Demon Slayer en un mockup de resina con su haori a cuadros y katana.",
+    "precio": 24900,
+    "imagen": "assets/anime/tanjiro-figure.webp",
+    "etiqueta": "CONCEPTO 02"
+  },
+  {
+    "id": "gojo-camiseta",
+    "nombre": "Camiseta conceptual de Gojo",
+    "categoria": "Ropa",
+    "descripcion": "Un mockup de camiseta negra con arte de Satoru Gojo, de Jujutsu Kaisen.",
+    "precio": 16900,
+    "imagen": "assets/anime/gojo-shirt.webp",
+    "etiqueta": "CONCEPTO 03"
+  },
+  {
+    "id": "tanjiro-nezuko-poster",
+    "nombre": "Póster de Tanjiro y Nezuko",
+    "categoria": "Pósters",
+    "descripcion": "Arte conceptual enmarcado de los hermanos Kamado, de Demon Slayer.",
+    "precio": 9900,
+    "imagen": "assets/anime/tanjiro-nezuko-poster.webp",
+    "etiqueta": "CONCEPTO 04"
+  },
+  {
+    "id": "dragon-ball-cartas",
+    "nombre": "Cartas conceptuales de Dragon Ball",
+    "categoria": "Cartas",
+    "descripcion": "Mockup de una colección visual inspirada en Goku y sus combates.",
+    "precio": 7900,
+    "imagen": "assets/anime/dragon-ball-cards.webp",
+    "etiqueta": "CONCEPTO 05"
+  },
+  {
+    "id": "luffy-llavero",
+    "nombre": "Llavero conceptual de Luffy",
+    "categoria": "Accesorios",
+    "descripcion": "Un mockup acrílico de Monkey D. Luffy, de One Piece, con cadena metálica.",
+    "precio": 4900,
+    "imagen": "assets/anime/luffy-keychain.webp",
+    "etiqueta": "CONCEPTO 06"
+  },
+  {
+    "id": "nezuko-peluche",
+    "nombre": "Peluche conceptual de Nezuko",
+    "categoria": "Peluches",
+    "descripcion": "Versión chibi de Nezuko Kamado, de Demon Slayer, en un mockup de felpa.",
+    "precio": 13900,
+    "imagen": "assets/anime/nezuko-plush.webp",
+    "etiqueta": "CONCEPTO 07"
+  },
+  {
+    "id": "gundam-model-kit",
+    "nombre": "Model kit conceptual RX-78-2",
+    "categoria": "Modelos armables",
+    "descripcion": "Mockup de un kit armable basado en el Gundam clásico de Mobile Suit Gundam.",
+    "precio": 34900,
+    "imagen": "assets/anime/gundam-kit.webp",
+    "etiqueta": "CONCEPTO 08"
+  }
+]

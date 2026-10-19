@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="t d">
+ <title id="t">Miniatura Capsule Hero</title><desc id="d">Mini figura heroica original en pose dinámica, dentro de un universo ficticio.</desc>
+ <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#ffb1a6"/><stop offset="1" stop-color="#f56565"/></linearGradient></defs>
+ <path fill="url(#bg)" d="M0 0h640v640H0z"/><path d="M0 430 640 294v346H0z" fill="#17233c"/><path d="m94 103 88 18-43 38-91-8zm414 80 81-33-17 70-83 36" fill="#d9f264"/><circle cx="493" cy="121" r="7" fill="#fffefa"/><circle cx="465" cy="146" r="4" fill="#fffefa"/>
+ <ellipse cx="324" cy="543" rx="171" ry="30" fill="#101829" opacity=".35"/>
+ <g stroke="#17233c" stroke-width="8" stroke-linejoin="round"><path d="m286 170 29-33 45 7 31 37-15 65-35 31-57-17-24-45z" fill="#fffefa"/><path d="m289 185 25-14 41 6 24 19-13 19-41-4-30 11z" fill="#9c91fa"/><path d="m298 202 25 1 15 9-31 9z" fill="#82d9d1"/><path d="m276 255-65 43-26 79 37 11 52-48 44-31M365 258l71 27 38 73-35 19-56-43-45-24" fill="#fc625d"/><path d="m294 274 70 3 23 105-50 59-70-42 5-82z" fill="#d9f264"/><path d="m284 389-27 85 20 54 40-3 21-64 20 60 42-10-17-79-32-50" fill="#fffefa"/><path d="m277 519-30 40 64 4 12-22m74-7 39 25 29-14-35-34" fill="#17233c"/><path d="m299 285 23 30-11 46m39-71-24 34 19 40" fill="none" stroke-width="5"/></g>
+ <text x="63" y="585" fill="#fffefa" font-family="Arial,sans-serif" font-size="15" font-weight="900" letter-spacing="4">CAPSULE HERO / 08</text><text x="63" y="608" fill="#d9f264" font-family="Arial,sans-serif" font-size="9" font-weight="800" letter-spacing="3">A NEW ORIGINAL UNIVERSE</text>
+</svg>

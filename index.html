@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="Anime Market CR: escaparate demo con mockups conceptuales de Dragon Ball, Demon Slayer, Jujutsu Kaisen y más. No hay inventario ni compras.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anime Market CR — objetos para otra dimensión">
+  <meta property="og:description" content="Mockups conceptuales de personajes y productos inspirados en anime. No son artículos oficiales ni están a la venta.">
+  <meta property="og:image" content="https://anime.labweb.top/assets/anime/hero-series.webp">
+  <link rel="canonical" href="https://anime.labweb.top/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Anime Market CR — objetos para otra dimensión</title>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="demo-ribbon" role="note">
+    <span class="demo-ribbon__mark" aria-hidden="true">!</span>
+    <p><strong>Vitrina demo</strong><span> · Mockups conceptuales; no son productos oficiales ni están a la venta.</span></p>
+    <a href="#sobre-demo">¿Qué significa?</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Anime Market CR, inicio">
+      <span class="brand__mark" aria-hidden="true">AM<span>★</span></span>
+      <span class="brand__wordmark">ANIME <b>MARKET</b><small>COLLECTOR'S EDITION / CR</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#sobre-demo">La demo</a>
+    </nav>
+    <div class="header-actions">
+      <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false" aria-label="Mostrar favoritos">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.7 4.7 0 0 1 8.8-2.3 4.7 4.7 0 0 1 8.8 2.3Z"/></svg>
+        <span class="favorites-count" id="favoritesCount">0</span>
+        <span class="sr-only">favoritos</span>
+      </button>
+      <button class="bag-button" id="openCart" type="button" aria-haspopup="dialog" aria-controls="cartDialog" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 8h14l1.2 12H3.8L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+        <span>Bolsa</span><span class="bag-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Coleccionismo anime · Edición 001</p>
+        <h1 id="heroTitle">Objetos para<br>otra <em>dimensión.</em></h1>
+        <p class="hero-lede">Dragon Ball, Demon Slayer, Jujutsu Kaisen y más, en ideas de figuras, ropa, arte y accesorios.</p>
+        <p class="hero-disclaimer">Las imágenes son mockups generados para esta demo, no fotos de productos oficiales.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#coleccion">Explorar la colección <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#sobre-demo">Conocer la demo <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-note"><span class="hero-note__stamp">AM<br>CR</span><span>Un escaparate conceptual<br><b>hecho para coleccionar ideas.</b></span></div>
+      </div>
+      <div class="hero-visual" role="group" aria-label="Mockup conceptual de figuras de Goku, Tanjiro y Gojo">
+        <div class="hero-visual__backdrop" aria-hidden="true"></div>
+        <span class="hero-index" aria-hidden="true">FIG. 001<br>ANIME COLLECTION</span>
+        <figure class="hero-art">
+          <img src="assets/anime/hero-series.webp" alt="" width="640" height="800" fetchpriority="high" decoding="async">
+          <figcaption><span>MOCKUP CONCEPTUAL / 01</span><b>Goku · Tanjiro · Gojo</b></figcaption>
+        </figure>
+        <span class="hero-orbit-stamp" aria-hidden="true">ARTE<br>DEMO</span>
+        <span class="hero-visual__caption" aria-hidden="true">Personajes de series reales · sin inventario</span>
+      </div>
+      <div class="hero-bottomline" aria-hidden="true"><span>FIGURAS</span><i>✳</i><span>ARTE</span><i>✳</i><span>FANDOM</span><i>✳</i><span>COLECCIÓN</span></div>
+    </section>
+
+    <section class="category-strip" id="categorias" aria-labelledby="categoryTitle">
+      <div class="section-kicker"><span>01 / ENCUENTRA TU UNIVERSO</span><span class="section-kicker__rule" aria-hidden="true"></span></div>
+      <div class="category-intro">
+        <h2 id="categoryTitle">Una colección,<br><em>muchas obsesiones.</em></h2>
+        <p>Explorá por tipo de pieza y encontrá ideas con tus personajes favoritos.</p>
+      </div>
+      <div class="category-links" role="group" aria-label="Filtrar colección por categoría">
+        <button class="category-link is-active" type="button" data-filter="all" aria-pressed="true"><span class="category-link__icon" aria-hidden="true">✳</span> Todo <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Figuras" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">◈</span> Figuras <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Ropa" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">◒</span> Ropa <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Pósters" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">▧</span> Pósters <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Cartas" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">▱</span> Cartas <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Accesorios" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">✦</span> Accesorios <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Peluches" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">☁</span> Peluches <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+        <button class="category-link" type="button" data-filter="Modelos armables" aria-pressed="false"><span class="category-link__icon" aria-hidden="true">⌘</span> Modelos armables <span class="category-link__arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <section class="collection" id="coleccion" aria-labelledby="collectionTitle">
+      <div class="section-kicker"><span>02 / SELECCIÓN DE LA CASA</span><span class="section-kicker__rule" aria-hidden="true"></span><span>CATÁLOGO CONCEPTUAL</span></div>
+      <div class="collection-heading">
+        <div><h2 id="collectionTitle">Ideas para <em>coleccionar</em></h2><p>Mockups inspirados en series y personajes reconocibles.</p></div>
+        <p class="results-count" id="resultsCount" role="status" aria-live="polite" aria-atomic="true">Cargando colección…</p>
+      </div>
+      <div class="product-grid" id="productGrid" aria-busy="true" aria-label="Productos de muestra"></div>
+      <div class="empty-state" id="emptyState" hidden><span aria-hidden="true">✳</span><p>No hay favoritos en esta selección todavía.</p><button class="text-link" id="resetFavorites" type="button">Volver a toda la colección →</button></div>
+      <p class="catalog-footnote"><span aria-hidden="true">✳</span> Imágenes conceptuales generadas para esta demo. Las series y personajes pertenecen a sus titulares; las piezas no son productos oficiales ni están a la venta.</p>
+    </section>
+
+    <section class="demo-panel" id="sobre-demo" aria-labelledby="demoTitle">
+      <div class="demo-panel__badge" aria-hidden="true">DEMO<br>ONLY</div>
+      <div class="demo-panel__copy"><p class="eyebrow eyebrow--light">03 / UN PROYECTO DE EXPLORACIÓN</p><h2 id="demoTitle">La vitrina está abierta.<br><em>La caja, todavía no.</em></h2><p>Esta experiencia sirve para explorar el concepto, las categorías y el diseño. Los mockups representan franquicias reales, pero no son fotos de artículos oficiales. No hay ventas, inventario, pagos ni pedidos por WhatsApp.</p></div>
+      <div class="demo-panel__aside"><span class="demo-panel__asterisk" aria-hidden="true">✳</span><p>Podés probar la bolsa y los filtros. Al intentar continuar, la demo te lo recordará.</p><a href="#coleccion">Seguir explorando <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand--footer" href="#inicio" aria-label="Anime Market CR, volver al inicio"><span class="brand__mark" aria-hidden="true">AM<span>★</span></span><span class="brand__wordmark">ANIME <b>MARKET</b><small>COLLECTOR'S EDITION / CR</small></span></a>
+    <p>Un concepto de escaparate para anime y coleccionismo.<br><strong>Mockups ilustrativos · No se procesan compras.</strong></p>
+    <a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    <div class="footer-bottom"><span>© 2026 Anime Market CR</span><span>Hecho como concepto independiente · Costa Rica</span></div>
+  </footer>
+
+  <dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartTitle">
+    <div class="dialog-header"><div><span class="dialog-eyebrow">TU SELECCIÓN</span><h2 id="cartTitle">Bolsa demo <span id="cartItemLabel">(0)</span></h2></div><button class="icon-button" type="button" data-close-cart aria-label="Cerrar bolsa">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span aria-hidden="true">✳</span><p>Tu bolsa demo está vacía.</p><a href="#coleccion" class="button button--small" data-close-cart>Explorar piezas</a></div>
+    <div class="cart-footer" id="cartFooter" hidden><div class="cart-total"><span>Total ilustrativo</span><strong id="cartTotal">₡0</strong></div><p>Los precios son ficticios y no se procesan pedidos.</p><button class="button button--primary button--wide" id="checkoutDemo" type="button">Probar siguiente paso <span aria-hidden="true">→</span></button></div>
+  </dialog>
+
+  <dialog class="detail-dialog" id="detailDialog" aria-labelledby="detailName" aria-describedby="detailDescription">
+    <button class="icon-button detail-close" type="button" data-close-detail aria-label="Cerrar detalle">×</button>
+    <div class="detail-layout"><div class="detail-art" id="detailArt"></div><div class="detail-copy"><span class="dialog-eyebrow" id="detailCategory"></span><h2 id="detailName"></h2><p id="detailDescription"></p><div class="detail-price"><span>Precio de muestra</span><strong id="detailPrice"></strong></div><p class="detail-note">Mockup conceptual; no es un producto oficial ni una oferta real.</p><button class="button button--primary button--wide" id="detailAdd" type="button">Añadir a bolsa demo <span aria-hidden="true">＋</span></button></div></div>
+  </dialog>
+
+  <dialog class="notice-dialog" id="noticeDialog" aria-labelledby="noticeTitle" aria-describedby="noticeText">
+    <button class="icon-button notice-close" type="button" data-close-notice aria-label="Cerrar aviso">×</button>
+    <span class="notice-mark" aria-hidden="true">!</span><p class="dialog-eyebrow">ESTÁS EN UNA DEMO</p><h2 id="noticeTitle">La aventura termina aquí <em>(por ahora).</em></h2><p id="noticeText">Esta página no acepta compras, no gestiona inventario y no abre WhatsApp. Las imágenes son mockups conceptuales de personajes de franquicias reales, no fotos ni productos oficiales.</p><button class="button button--primary" type="button" data-close-notice>Entendido <span aria-hidden="true">✓</span></button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

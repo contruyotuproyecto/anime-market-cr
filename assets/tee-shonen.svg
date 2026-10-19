@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="t d">
+ <title id="t">Camiseta Shōnen Club</title><desc id="d">Camiseta oscura con un diseño tipográfico original en rosa y verde ácido.</desc>
+ <path fill="#f3acb2" d="M0 0h640v640H0z"/><path d="M0 468 640 357v283H0z" fill="#fc625d"/><path d="M512 78h66v66h-66z" fill="#d9f264"/><path d="m527 94 35 35m0-35-35 35" stroke="#17233c" stroke-width="4"/>
+ <path d="m231 99 39-31h98l40 31 102 47-46 103-68-25v252H244V224l-68 25-46-103z" fill="#17233c" stroke="#101829" stroke-width="9" stroke-linejoin="round"/>
+ <path d="m270 72 14 44h71l14-44M284 116l36 38 35-38" fill="#d9f264" stroke="#101829" stroke-width="7" stroke-linejoin="round"/>
+ <text x="320" y="260" fill="#fc625d" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="900" letter-spacing="5">SHŌNEN</text>
+ <text x="320" y="311" fill="#fffdf7" text-anchor="middle" font-family="Arial,sans-serif" font-size="45" font-weight="900" letter-spacing="-2">CLUB</text>
+ <path d="M238 332h164" stroke="#82d9d1" stroke-width="7"/><circle cx="320" cy="385" r="34" fill="#fc625d" stroke="#fffdf7" stroke-width="5"/><path d="m320 362 8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3z" fill="#d9f264"/>
+ <text x="57" y="585" fill="#17233c" font-family="Arial,sans-serif" font-size="12" font-weight="900" letter-spacing="3">ORIGINAL FAN CULTURE / 03</text>
+</svg>

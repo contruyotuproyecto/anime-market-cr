@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="t d">
+ <title id="t">Póster Nebula City</title><desc id="d">Afiche original de una ciudad nocturna ficticia con cielo violeta y un sol coral.</desc>
+ <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#9c91fa"/><stop offset="1" stop-color="#f4a7af"/></linearGradient></defs>
+ <path fill="#d8d3c8" d="M0 0h640v640H0z"/><path d="M92 42h456v556H92z" fill="#fffefa" stroke="#17233c" stroke-width="3"/><path d="M122 72h396v420H122z" fill="url(#sky)"/>
+ <circle cx="405" cy="205" r="79" fill="#fc625d"/><path d="M142 402h353v90H142z" fill="#17233c"/>
+ <path d="M142 349h51v53h-51zM202 304h62v98h-62zM273 370h47v32h-47zM329 278h69v124h-69zM407 334h52v68h-52zM465 294h30v108h-30z" fill="#17233c"/>
+ <g fill="#d9f264"><path d="M216 324h10v13h-10zM239 324h10v13h-10zM343 298h13v15h-13zM371 298h13v15h-13zM477 314h8v12h-8zM477 339h8v12h-8z"/></g>
+ <path d="M122 418 518 365v127H122z" fill="#253453"/><path d="m135 448 384-49M135 471l384-49" stroke="#82d9d1" stroke-width="3" opacity=".8"/>
+ <text x="143" y="126" fill="#17233c" font-family="Arial,sans-serif" font-size="13" font-weight="900" letter-spacing="4">AFTER DARK / 04</text>
+ <text x="140" y="543" fill="#17233c" font-family="Arial,sans-serif" font-size="30" font-weight="900" letter-spacing="-1">NEBULA CITY</text><text x="143" y="568" fill="#62687a" font-family="Arial,sans-serif" font-size="10" font-weight="800" letter-spacing="3">A PLACE THAT DOESN'T EXIST</text>
+</svg>

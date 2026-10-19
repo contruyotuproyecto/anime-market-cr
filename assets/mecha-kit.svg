@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="t d">
+ <title id="t">Kit mecha Asterión</title><desc id="d">Piezas de un robot conceptual dispuestas como un kit para armar.</desc>
+ <defs><linearGradient id="b" x2=".9" y2="1"><stop stop-color="#9be1d9"/><stop offset="1" stop-color="#4dbab5"/></linearGradient></defs>
+ <path fill="url(#b)" d="M0 0h640v640H0z"/><circle cx="483" cy="145" r="94" fill="#d9f264"/><path d="M0 490 640 336v304H0z" fill="#17233c"/>
+ <g fill="none" stroke="#17233c" stroke-width="4"><rect x="52" y="48" width="536" height="544" rx="10"/><path d="M80 76h150v144H80zM246 76h145v144H246zM407 76h153v144H407zM80 238h150v142H80zM246 238h145v142H246zM407 238h153v142H407zM80 398h150v166H80zM246 398h145v166H246zM407 398h153v166H407z" stroke-dasharray="8 7"/></g>
+ <g stroke="#17233c" stroke-width="5" stroke-linejoin="round"><path d="m302 114 24-21 25 7 20 26-10 45-19 17-42-11-14-29z" fill="#fffdf7"/><path d="m309 128 19-10 21 8-2 12-19 6-17-5z" fill="#fc625d"/><path d="m303 181-22 27 14 41 23-10 4-31M356 180l27 25-8 39-23-7-4-29" fill="#fc625d"/><path d="m315 185 30-7 15 39-18 38-32-9-10-35z" fill="#fffdf7"/><path d="m314 249-14 43 12 8 20-30 10 30 18-4-7-48M297 202l-15 8M364 202l18 9" fill="none"/></g>
+ <g fill="#17233c" font-family="Arial,sans-serif" font-weight="900"><text x="72" y="108" font-size="11">FRAME</text><text x="72" y="552" font-size="12" letter-spacing="2">ASSEMBLY / 02</text></g>
+ <path d="M99 447h111M99 460h69" stroke="#fc625d" stroke-width="5"/>
+</svg>
