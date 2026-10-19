@@ -131,6 +131,8 @@ h1 em, h2 em { color: var(--coral-ink); font-style: normal; }
 .price-block small { color: var(--muted); font-size: 8px; }
 .add-button { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--ink); background: var(--acid); font-size: 20px; line-height: 1; cursor: pointer; transition: background-color .15s ease, transform .15s ease; }
 .add-button:hover { background: var(--coral); transform: rotate(90deg); }
+.add-button:disabled { background: var(--paper-deep); color: var(--muted); cursor: not-allowed; }
+.add-button:disabled:hover { transform: none; }
 .catalog-footnote { margin-top: 24px; color: var(--muted); font-size: 10px; line-height: 1.5; }
 .catalog-footnote span { color: var(--coral); font-size: 14px; vertical-align: -1px; }
 .empty-state { padding: 50px 20px; border: 1px dashed #a8a49c; text-align: center; }
@@ -174,6 +176,7 @@ dialog::backdrop { background: #10172ab8; backdrop-filter: blur(2px); }
 .cart-row p { margin: 0; color: var(--muted); font-size: 10px; }
 .quantity-controls { margin-top: 8px; display: inline-flex; align-items: center; border: 1px solid var(--line); }
 .quantity-controls button { width: 26px; height: 25px; border: 0; background: transparent; cursor: pointer; font-size: 15px; }
+.quantity-controls button:disabled { color: var(--muted); cursor: not-allowed; }
 .quantity-controls output { min-width: 23px; text-align: center; font-size: 10px; }
 .remove-item { padding: 3px; align-self: start; border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 17px; }
 .remove-item:hover { color: #a3242a; }

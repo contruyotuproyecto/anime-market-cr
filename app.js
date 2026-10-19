@@ -2,6 +2,7 @@
 
 const CART_KEY = "anime_market_cr_demo_cart_v1";
 const FAVORITES_KEY = "anime_market_cr_demo_favorites_v1";
+const CART_ITEM_LIMIT = 9;
 const grid = document.getElementById("productGrid");
 const resultsCount = document.getElementById("resultsCount");
 const emptyState = document.getElementById("emptyState");
@@ -32,9 +33,27 @@ function readList(key) {
 function saveList(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
+    return true;
   } catch {
-    showToast("El navegador no guardó este cambio.");
+    return false;
   }
+}
+
+function showSaveResult(saved, successMessage) {
+  showToast(saved
+    ? successMessage
+    : "El cambio solo se mantendrá mientras esta página esté abierta; el navegador no pudo guardarlo.");
+}
+
+function normalizeCart(items, productIds) {
+  const quantities = new Map();
+  items.forEach((item) => {
+    if (!item || typeof item.id !== "string" || !productIds.has(item.id)) return;
+    const parsedQuantity = Number(item.quantity);
+    const quantity = Math.min(CART_ITEM_LIMIT, Math.max(1, Number.isFinite(parsedQuantity) ? Math.trunc(parsedQuantity) : 1));
+    quantities.set(item.id, Math.min(CART_ITEM_LIMIT, (quantities.get(item.id) || 0) + quantity));
+  });
+  return [...quantities].map(([id, quantity]) => ({ id, quantity }));
 }
 
 function money(amount) {
@@ -129,7 +148,12 @@ function createCard(product) {
   addButton.className = "add-button";
   addButton.type = "button";
   addButton.textContent = "+";
-  addButton.setAttribute("aria-label", "Añadir " + product.nombre + " a la bolsa demo");
+  const cartItem = cart.find((item) => item.id === product.id);
+  const atLimit = cartItem && cartItem.quantity >= CART_ITEM_LIMIT;
+  addButton.disabled = Boolean(atLimit);
+  addButton.setAttribute("aria-label", atLimit
+    ? "Máximo de " + CART_ITEM_LIMIT + " unidades de " + product.nombre + " en la bolsa demo"
+    : "Añadir " + product.nombre + " a la bolsa demo");
   addButton.addEventListener("click", () => addToCart(product));
   meta.append(priceBlock, addButton);
   info.append(category, name, description, meta);
@@ -140,12 +164,12 @@ function createCard(product) {
 function toggleFavorite(product) {
   if (favorites.has(product.id)) favorites.delete(product.id);
   else favorites.add(product.id);
-  saveList(FAVORITES_KEY, [...favorites]);
+  const saved = saveList(FAVORITES_KEY, [...favorites]);
   updateFavoritesButton();
   renderProducts();
   const nextFocus = Array.from(document.querySelectorAll(".favorite-button")).find((button) => button.dataset.productId === product.id);
   (nextFocus || favoritesToggle).focus();
-  showToast(favorites.has(product.id) ? "Agregado a favoritos" : "Quitado de favoritos");
+  showSaveResult(saved, favorites.has(product.id) ? "Agregado a favoritos" : "Quitado de favoritos");
 }
 
 function updateFavoritesButton() {
@@ -168,27 +192,30 @@ function setFilter(filter) {
 
 function addToCart(product) {
   const item = cart.find((entry) => entry.id === product.id);
-  if (item) item.quantity = Math.min(item.quantity + 1, 9);
+  if (item && item.quantity >= CART_ITEM_LIMIT) {
+    showToast("Límite demo: máximo " + CART_ITEM_LIMIT + " unidades de " + product.nombre);
+    return;
+  }
+  if (item) item.quantity += 1;
   else cart.push({ id: product.id, quantity: 1 });
-  saveList(CART_KEY, cart);
+  const saved = saveList(CART_KEY, cart);
   renderCart();
-  showToast(product.nombre + " · agregado a tu bolsa demo");
+  showSaveResult(saved, product.nombre + " · agregado a tu bolsa demo");
 }
 
-function changeQuantity(id, amount) {
+function changeQuantity(id, amount, focusAction) {
   const item = cart.find((entry) => entry.id === id);
   if (!item) return;
-  item.quantity = Math.min(9, item.quantity + amount);
+  item.quantity = Math.min(CART_ITEM_LIMIT, item.quantity + amount);
   if (item.quantity < 1) cart = cart.filter((entry) => entry.id !== id);
-  saveList(CART_KEY, cart);
-  renderCart();
+  const saved = saveList(CART_KEY, cart);
+  renderCart({ focusProductId: id, focusAction });
+  if (!saved) showSaveResult(false);
 }
 
-function renderCart() {
+function renderCart({ focusProductId, focusAction } = {}) {
   const cartItems = document.getElementById("cartItems");
   cartItems.replaceChildren();
-  cart = cart.filter((entry) => products.some((product) => product.id === entry.id))
-    .map((entry) => ({ id: entry.id, quantity: Math.min(9, Math.max(1, Number(entry.quantity) || 1)) }));
   const entries = cart.map((entry) => ({ entry, product: products.find((product) => product.id === entry.id) }));
   const count = entries.reduce((sum, item) => sum + item.entry.quantity, 0);
   const total = entries.reduce((sum, item) => sum + item.product.precio * item.entry.quantity, 0);
@@ -202,6 +229,7 @@ function renderCart() {
   entries.forEach(({ entry, product }) => {
     const row = document.createElement("div");
     row.className = "cart-row";
+    row.dataset.productId = product.id;
     const image = document.createElement("img");
     image.src = product.imagen;
     image.alt = "";
@@ -218,16 +246,18 @@ function renderCart() {
     minus.type = "button";
     minus.textContent = "−";
     minus.setAttribute("aria-label", "Quitar una unidad de " + product.nombre);
-    minus.addEventListener("click", () => changeQuantity(product.id, -1));
+    minus.dataset.quantityAction = "minus";
+    minus.addEventListener("click", () => changeQuantity(product.id, -1, "minus"));
     const quantity = document.createElement("output");
     quantity.textContent = String(entry.quantity);
     quantity.setAttribute("aria-label", "Cantidad de " + product.nombre);
     const plus = document.createElement("button");
     plus.type = "button";
     plus.textContent = "+";
-    plus.disabled = entry.quantity >= 9;
+    plus.disabled = entry.quantity >= CART_ITEM_LIMIT;
     plus.setAttribute("aria-label", "Añadir una unidad de " + product.nombre);
-    plus.addEventListener("click", () => changeQuantity(product.id, 1));
+    plus.dataset.quantityAction = "plus";
+    plus.addEventListener("click", () => changeQuantity(product.id, 1, "plus"));
     controls.append(minus, quantity, plus);
     detail.append(title, price, controls);
     const remove = document.createElement("button");
@@ -236,14 +266,37 @@ function renderCart() {
     remove.textContent = "×";
     remove.setAttribute("aria-label", "Quitar " + product.nombre + " de la bolsa demo");
     remove.addEventListener("click", () => {
+      const rowIndex = cart.findIndex((candidate) => candidate.id === product.id);
       cart = cart.filter((candidate) => candidate.id !== product.id);
-      saveList(CART_KEY, cart);
+      const saved = saveList(CART_KEY, cart);
       renderCart();
+      const nextRow = document.querySelectorAll(".cart-row")[Math.min(rowIndex, cart.length - 1)];
+      (nextRow?.querySelector(".quantity-controls button") || document.querySelector("#cartEmpty a") || document.querySelector("[data-close-cart]"))?.focus();
+      if (!saved) showSaveResult(false);
     });
     row.append(image, detail, remove);
     cartItems.append(row);
   });
-  saveList(CART_KEY, cart);
+  updateAddButtons();
+  if (focusProductId) {
+    const row = [...document.querySelectorAll(".cart-row")].find((candidate) => candidate.dataset.productId === focusProductId);
+    const preferred = row?.querySelector('[data-quantity-action="' + focusAction + '"]');
+    (preferred && !preferred.disabled ? preferred : row?.querySelector(".quantity-controls button:not(:disabled)") || document.querySelector(".cart-row .quantity-controls button") || document.querySelector("[data-close-cart]"))?.focus();
+  }
+}
+
+function updateAddButtons() {
+  document.querySelectorAll(".product-card").forEach((card) => {
+    const productId = card.querySelector(".favorite-button")?.dataset.productId;
+    const item = cart.find((entry) => entry.id === productId);
+    const button = card.querySelector(".add-button");
+    if (!button) return;
+    const atLimit = item && item.quantity >= CART_ITEM_LIMIT;
+    button.disabled = Boolean(atLimit);
+    button.setAttribute("aria-label", atLimit
+      ? "Máximo de " + CART_ITEM_LIMIT + " unidades de " + card.querySelector(".product-name").textContent + " en la bolsa demo"
+      : "Añadir " + card.querySelector(".product-name").textContent + " a la bolsa demo");
+  });
 }
 
 function openDetail(product) {
@@ -324,7 +377,7 @@ async function start() {
     products = data.filter((product) => product && typeof product.id === "string" && typeof product.nombre === "string");
     if (!products.length) throw new Error("La colección no tiene piezas disponibles.");
     const productIds = new Set(products.map((product) => product.id));
-    cart = cart.filter((item) => productIds.has(item.id));
+    cart = normalizeCart(cart, productIds);
     favorites = new Set([...favorites].filter((id) => productIds.has(id)));
     saveList(CART_KEY, cart);
     saveList(FAVORITES_KEY, [...favorites]);
