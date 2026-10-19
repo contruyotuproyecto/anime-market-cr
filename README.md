@@ -23,7 +23,6 @@ Luego abrí `http://localhost:8000`.
 - `assets/anime/`: imágenes conceptuales generadas para la demo, optimizadas en WebP.
 - `assets/`: recursos vectoriales de identidad y versiones anteriores de ilustraciones.
 - `robots.txt`, `sitemap.xml` y `CNAME`: archivos para el despliegue previsto en `anime.labweb.top`.
-- `.github/workflows/static.yml`: despliegue estático a GitHub Pages mediante Actions.
 
 ## Editar una pieza
 
@@ -31,4 +30,4 @@ Agregá un objeto a `productos.json` con un `id` único, `nombre`, `categoria`, 
 
 ## Publicación prevista
 
-Repositorio independiente `contruyotuproyecto/anime-market-cr` y GitHub Pages con dominio personalizado `anime.labweb.top`. El dominio debe configurarse en Pages y en el proveedor DNS antes de activar HTTPS. La propiedad y el sitemap de este nuevo sitio se gestionarán por separado en Google Search Console.
+Repositorio independiente `contruyotuproyecto/anime-market-cr` y GitHub Pages con dominio personalizado `anime.labweb.top`, publicado directamente desde la raíz de `main`. El dominio está configurado en Pages y en el proveedor DNS; HTTPS se activa cuando GitHub emite el certificado. La propiedad y el sitemap de este nuevo sitio se gestionarán por separado en Google Search Console.
