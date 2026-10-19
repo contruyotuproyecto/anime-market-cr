@@ -160,6 +160,7 @@ h1 em, h2 em { color: var(--coral-ink); font-style: normal; }
 .site-footer > p strong { color: var(--ink); }
 .back-top { justify-self: end; font-size: 10px; font-weight: 800; text-decoration: none; }
 .footer-bottom { grid-column: 1 / -1; padding-top: 13px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
+.footer-bottom a { color: var(--ink); font-weight: 800; }
 
 dialog { color: var(--ink); }
 dialog::backdrop { background: #10172ab8; backdrop-filter: blur(2px); }
