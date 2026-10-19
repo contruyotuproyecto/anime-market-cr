@@ -17,34 +17,36 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <div class="demo-ribbon" role="note">
-    <span class="demo-ribbon__mark" aria-hidden="true">!</span>
-    <p><strong>Vitrina demo</strong><span> · Mockups conceptuales; no son productos oficiales ni están a la venta.</span></p>
-    <a href="#sobre-demo">¿Qué significa?</a>
-  </div>
-
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Anime Market CR, inicio">
-      <span class="brand__mark" aria-hidden="true">AM<span>★</span></span>
-      <span class="brand__wordmark">ANIME <b>MARKET</b><small>COLLECTOR'S EDITION / CR</small></span>
-    </a>
-    <nav class="main-nav" aria-label="Navegación principal">
-      <a href="#coleccion">Colección</a>
-      <a href="#categorias">Categorías</a>
-      <a href="#sobre-demo">La demo</a>
-    </nav>
-    <div class="header-actions">
-      <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false" aria-label="Mostrar favoritos">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.7 4.7 0 0 1 8.8-2.3 4.7 4.7 0 0 1 8.8 2.3Z"/></svg>
-        <span class="favorites-count" id="favoritesCount">0</span>
-        <span class="sr-only">favoritos</span>
-      </button>
-      <button class="bag-button" id="openCart" type="button" aria-haspopup="dialog" aria-controls="cartDialog" aria-expanded="false">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 8h14l1.2 12H3.8L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
-        <span>Bolsa</span><span class="bag-count" id="cartCount">0</span>
-      </button>
+  <div class="site-topbar">
+    <div class="demo-ribbon" role="note">
+      <span class="demo-ribbon__mark" aria-hidden="true">!</span>
+      <p><strong>Vitrina demo</strong><span> · Mockups conceptuales; no son productos oficiales ni están a la venta.</span></p>
+      <a href="#sobre-demo">¿Qué significa?</a>
     </div>
-  </header>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Anime Market CR, inicio">
+        <span class="brand__mark" aria-hidden="true">AM<span>★</span></span>
+        <span class="brand__wordmark">ANIME <b>MARKET</b><small>COLLECTOR'S EDITION / CR</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#coleccion">Colección</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#sobre-demo">La demo</a>
+      </nav>
+      <div class="header-actions">
+        <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false" aria-label="Mostrar favoritos">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.7 4.7 0 0 1 8.8-2.3 4.7 4.7 0 0 1 8.8 2.3Z"/></svg>
+          <span class="favorites-count" id="favoritesCount">0</span>
+          <span class="sr-only">favoritos</span>
+        </button>
+        <button class="bag-button" id="openCart" type="button" aria-haspopup="dialog" aria-controls="cartDialog" aria-expanded="false">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 8h14l1.2 12H3.8L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+          <span>Bolsa</span><span class="bag-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+  </div>
 
   <main id="contenido">
     <section class="hero" id="inicio" aria-labelledby="heroTitle">
